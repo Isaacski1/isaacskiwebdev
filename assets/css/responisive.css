@@ -1,0 +1,211 @@
+@media (max-width: 1024px) {
+  .copyright {
+    text-align: left !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Contact Pgae Section Start */
+  .navbar-brand img {
+    width: 210px;
+  }
+  .hero-sub-title {
+    font-size: 15px !important;
+  }
+
+  .hero-title {
+    font-size: 25px !important;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    color: #111;
+  }
+  .contact-info-content h5 {
+    font-size: 20px;
+  }
+  .contact-info-content p {
+    font-size: 16px;
+  }
+  /* Contact Pgae Section End */
+}
+
+@media (max-width: 375px) {
+  /* Home Page Section Start */
+
+  .hero-content {
+    margin-top: -80px;
+  }
+  .hero-sub-title {
+    font-size: 15px !important;
+  }
+
+  .hero-title {
+    font-size: 20px !important;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    color: #111;
+  }
+
+  .hero-img {
+    margin-top: -40px;
+  }
+
+  .about-left-content {
+    padding: 10px;
+    gap: 8px;
+    left: -10px;
+  }
+
+  .about-left-content h5 {
+    font-size: 20px;
+  }
+
+  .site-title-tagline {
+    font-size: 15px;
+  }
+
+  .site-title {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  .theme-btn {
+    width: auto;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .site-heading p {
+    font-size: 13px;
+  }
+
+  .site-title {
+    font-size: 22px;
+  }
+
+  .site-p {
+    font-size: 14px;
+  }
+
+  .choose-item-icon i {
+    font-size: 40px;
+  }
+
+  .choose-item-content h4 {
+    font-size: 16px;
+  }
+
+  .choose-item-content p {
+    font-size: 14px;
+  }
+
+  .case-img img {
+    height: 350px !important;
+  }
+
+  .accordion-button {
+    font-size: 13px;
+  }
+
+  .accordion-button span i {
+    font-size: 15px;
+  }
+
+  .accordion-body {
+    font-size: 14px;
+  }
+
+  .testimonial-quote-icon i {
+    font-size: 17px;
+  }
+
+  .testimonial-quote p {
+    font-size: 14px;
+  }
+
+  .testimonial-author-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial-author-info h4 {
+    font-size: 14px;
+  }
+
+  .testimonial-author-info p {
+    font-size: 12px;
+  }
+
+  .testimonial-rate i {
+    font-size: 12px;
+  }
+  .blog-title a {
+    font-size: 17px;
+  }
+
+  .blog-item-info p {
+    font-size: 14px;
+  }
+
+  .footer-widget-box p {
+    font-size: 13px;
+  }
+
+  .footer-menu li a {
+    font-size: 12px;
+  }
+  /* Home Page Section End */
+
+  /* About Page Section Start */
+  .about-area {
+    margin-top: -100px;
+  }
+
+  .about-left-info {
+    width: 120px;
+    height: auto;
+    padding: 5px;
+  }
+
+  .about-left-info h5 {
+    font-size: 20px;
+  }
+
+  .about-left-info p {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+
+  #site-title-tagline {
+    font-size: 15px;
+  }
+
+  .site-heading #site-title {
+    font-size: 25px;
+  }
+  /* About Page Section End */
+
+  /* Pricing Page Section Start */
+  .pricing-header h5 {
+    font-size: 25px;
+  }
+
+  .pricing-amount strong {
+    font-size: 35px;
+  }
+  /* Pricing Page Section End */
+
+  /* Web Development Page Section Start */
+  #sub-text {
+    font-size: 20px;
+  }
+  /* Web Development Page Section End */
+}
