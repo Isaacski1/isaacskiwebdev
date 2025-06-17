@@ -183,7 +183,7 @@ h1 {
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 40px;
   line-height: 114%;
   font-weight: 600;
 }
@@ -5288,7 +5288,6 @@ span {
 
 .news-box-items-2 {
   margin-top: 30px;
-  
 }
 .news-box-items-2 .news-img {
   position: relative;
@@ -5456,7 +5455,7 @@ span {
 .main-sidebar .single-sidebar-widget .search-widget form button:hover {
   background-color: var(--header);
 }
-.main-sidebar .single-sidebar-widget .news-widget-categories ul a  {
+.main-sidebar .single-sidebar-widget .news-widget-categories ul a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -5518,7 +5517,6 @@ span {
   height: 120px;
   object-fit: cover;
   aspect-ratio: 1;
-  
 }
 .main-sidebar
   .single-sidebar-widget
@@ -7942,7 +7940,6 @@ input.main-search-input::placeholder {
   color: var(--header);
   font-size: 20px;
   transition: all 0.4s;
-
 }
 .sertvice-details-wrapper
   .service-details-content
@@ -10645,4 +10642,3 @@ input.main-search-input::placeholder {
 .testimonial-card-items121:hover .testimonial-items-top::before {
   background-color: var(--border);
 } /*# sourceMappingURL=main.css.map */
-
