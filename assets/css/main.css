@@ -4569,7 +4569,7 @@ span {
 
 .breadcrumb-wrapper .page-heading h1 {
   color: var(--white);
-  font-size: 74px;
+  font-size: 50px;
   position: relative;
   z-index: 9;
   font-weight: 500;
@@ -4577,7 +4577,7 @@ span {
 
 @media (max-width: 575px) {
   .breadcrumb-wrapper .page-heading h1 {
-    font-size: 60px;
+    font-size: 35px;
   }
 }
 
