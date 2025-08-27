@@ -7135,7 +7135,7 @@ input.main-search-input::placeholder {
   position: fixed;
   display: inline-block;
   z-index: 999;
-  right: 30px;
+  right: 25px;
   bottom: 140px;
   transition: all 0.4s ease-in-out;
   opacity: 0;
@@ -12477,3 +12477,194 @@ section ul li {
   }
 }
 /* Terms & Conditions End */
+
+/* Social Handles */
+.social-handles {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.social-icon-box {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 30px;
+}
+
+.social-icon-box-img img {
+  width: 50px;
+  height: 50px;
+  cursor: default;
+  -webkit-user-drag: none;
+  background: filter opacity(0);
+}
+
+.social-media-handles {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
+}
+
+/* Show when hovering icon OR handles */
+.social-icon-box-img:hover + .social-media-handles,
+.social-media-handles:hover {
+  max-height: 500px; /* enough to show all */
+}
+
+
+
+
+
+
+
+.social-media-handles .box-1 a {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.social-media-handles .box-1 a img {
+  width: 45px;
+  height: 45px;
+}
+
+.social-media-handles .box-1 a .media-name {
+  padding: 10px 30px;
+  border-radius: 25px;
+  background: #016fff;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .13s ease-in-out;
+}
+.social-media-handles .box-1 a:hover .media-name {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-media-handles .box-1 a .media-name-2 {
+  padding: 10px 30px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .13s ease-in-out;
+}
+
+.social-media-handles .box-1 a:hover .media-name-2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-media-handles .box-1 a .media-name-3 {
+  padding: 10px 30px;
+  border-radius: 25px;
+  background: #000;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .13s ease-in-out;
+}
+
+.social-media-handles .box-1 a:hover .media-name-3 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-media-handles .box-1 a .media-name-4 {
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  background: #4285F4;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .13s ease-in-out;
+}
+
+.social-media-handles .box-1 a:hover .media-name-4 {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.social-media-handles .box-1 a .media-name-5 {
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  background: green;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: .13s ease-in-out;
+}
+
+.social-media-handles .box-1 a:hover .media-name-5 {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+@media (max-width: 768px) {
+  /* Social Handles */
+    .social-icon-box {
+        row-gap: 5px;
+    }
+    .social-icon-box-img img {
+        width: 50px;
+        height: 50px;
+    }
+    .social-media-handles .box-1 a img {
+        width: 40px;
+        height: 40px;
+    }
+    .social-media-handles .box-1 a .media-name,
+    .social-media-handles .box-1 a .media-name-1,
+    .social-media-handles .box-1 a .media-name-2,
+    .social-media-handles .box-1 a .media-name-3{
+        padding: 7px 15px;
+        font-size: 16px;
+    }
+
+    .social-media-handles .box-1 a .media-name-4,
+    .social-media-handles .box-1 a .media-name-5 {
+    font-size: 15px;
+    width: initial;
+    height: initial;
+    padding: 2px 20;
+    }
+}
+
+@media(max-width: 425px) {
+    .social-media-handles .box-1 a .media-name,
+    .social-media-handles .box-1 a .media-name-1,
+    .social-media-handles .box-1 a .media-name-2,
+    .social-media-handles .box-1 a .media-name-3{
+        display: none;
+    }
+
+    .social-media-handles .box-1 a .media-name-4,
+    .social-media-handles .box-1 a .media-name-5 {
+    display: none;
+    }
+
+    .scroll-to-top__text i {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
