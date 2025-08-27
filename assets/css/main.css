@@ -3244,6 +3244,20 @@ span {
   padding: 30px 0;
 }
 
+.footer-bottom .conditions-box {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.footer-bottom .conditions-box a {
+  color: var(--text);
+}
+
+.footer-bottom .conditions-box a:hover {
+  color: var(--theme);
+}
+
 @media (max-width: 991px) {
   .footer-bottom .footer-wrapper {
     flex-wrap: wrap;
@@ -7122,7 +7136,7 @@ input.main-search-input::placeholder {
   display: inline-block;
   z-index: 999;
   right: 30px;
-  bottom: 60px;
+  bottom: 140px;
   transition: all 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
@@ -12251,4 +12265,215 @@ input.main-search-input::placeholder {
   background-color: var(--border);
 }
 
-/*# sourceMappingURL=main.css.map */
+/* Cookie Banner Styles */
+#cookie-banner {
+  display: none;
+}
+
+.cookie-box {
+  position: fixed;
+  bottom: -200px;
+  left: 0%;
+  width: 90%;
+  max-width: 500px;
+  background: #f9f9f9;
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 9999;
+  transition: bottom 0.6s ease;
+}
+
+.cookie-box h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #050129;
+  margin-bottom: 10px;
+}
+
+.cookie-box p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.cookie-box.show {
+  bottom: 20px; /* slides up */
+}
+
+.cookie-box a {
+  color: rgb(0, 110, 255);
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  margin-top: 15px;
+}
+
+.cookie-buttons button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cookie-buttons button:first-child {
+  background: rgb(0, 110, 255);
+  color: white;
+}
+
+.cookie-buttons button:last-child {
+  background: #ff2f2f;
+  color: #ddd;
+  margin-left: 10px;
+}
+
+.cookie-buttons button:hover {
+  opacity: 0.85;
+}
+
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .cookie-banner {
+    font-size: 13px;
+    padding: 14px 16px;
+  }
+
+  .cookie-buttons button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .cookie-banner {
+    bottom: 10px;
+    padding: 12px 14px;
+    width: 95%;
+    font-size: 12px;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cookie-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Terms & Conditions Start */
+/* Container */
+.terms-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.terms-container h2 {
+  font-size: 1.4rem;
+  color: #010d27;
+  margin-top: 1.5rem;
+}
+
+.terms-container p, .terms-container ul {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.terms-container ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+/* Links */
+.terms-container a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .terms-container {
+    padding: 0 1rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .terms-container p, .terms-container ul {
+    font-size: 0.95rem;
+  }
+}
+
+/* Sections */
+/* Container */
+.policy-container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+}
+section {
+  margin-bottom: 2rem;
+}
+section h2 {
+  font-size: 1.4rem;
+  color: #010d27;
+  margin-top: 1.5rem;
+}
+section p, section ul {
+  font-size: 1rem;
+  color: #444;
+}
+section ul {
+  padding-left: 1.5rem;
+}
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .policy-container {
+    padding: 1.5rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .policy-container {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  section h2 {
+    font-size: 1.1rem;
+  }
+}
+/* Terms & Conditions End */
