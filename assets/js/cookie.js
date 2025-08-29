@@ -17,17 +17,16 @@ function getCookie(name) {
   return "";
 }
 
-// Accept button
 function acceptCookies() {
   setCookie("cookieConsent", "accepted", 30); // valid for 30 days
-  document.querySelector(".cookie-box").style.display = "none";
+  document.getElementById("cookie-banner").style.display = "none";
 }
 
-// Decline button
 function declineCookies() {
   setCookie("cookieConsent", "declined", 7); // remind after 7 days
-  document.querySelector(".cookie-box").style.display = "none";
+  document.getElementById("cookie-banner").style.display = "none";
 }
+
 
 // Show banner if no cookie set
 window.onload = function() {
