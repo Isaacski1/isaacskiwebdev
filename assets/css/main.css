@@ -12373,7 +12373,7 @@ input.main-search-input::placeholder {
     width: 100%;
     height: auto;
     top: 0;
-    bottom: initial;
+    bottom: initial !important;
   }
   .cookie-banner {
     bottom: 10px;

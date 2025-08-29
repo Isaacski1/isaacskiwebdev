@@ -30,9 +30,11 @@ function declineCookies() {
 // Safe DOM load
 document.addEventListener("DOMContentLoaded", function () {
   if (getCookie("cookieConsent") === "") {
-    const banner = document.getElementById("cookie-banner");
-    banner.style.display = "flex";
-    setTimeout(() => document.querySelector(".cookie-box").classList.add("show"), 300);
+    setTimeout(() => {
+      const banner = document.getElementById("cookie-banner");
+      banner.style.display = "flex";
+      setTimeout(() => document.querySelector(".cookie-box").classList.add("show"), 300);
+    }, 10000); // <-- Wait 10 seconds before showing
   }
 
   // Attach event listeners
