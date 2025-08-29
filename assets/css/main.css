@@ -12278,7 +12278,7 @@ input.main-search-input::placeholder {
 
 .cookie-box {
   position: fixed;
-  bottom: -200px;
+  bottom: 0;
   left: 0%;
   width: 90%;
   max-width: 500px;
@@ -12357,6 +12357,7 @@ input.main-search-input::placeholder {
     padding: 8px 14px;
     font-size: 13px;
   }
+ 
 }
 
 /* Mobile */
@@ -12376,6 +12377,12 @@ input.main-search-input::placeholder {
   .cookie-buttons button {
     width: 100%;
     text-align: center;
+  }
+   .cookie-box h1 {
+    font-size: 18px;
+  }
+  .cookie-box p {
+    font-size: 13px;
   }
 }
 
