@@ -1,3 +1,6 @@
+# robots.txt for isaacskiwebdev.com
+
+# Allow social media bots
 User-agent: facebookexternalhit
 Allow: /
 
@@ -10,7 +13,9 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# Allow all other bots
 User-agent: *
 Allow: /
 
+# Sitemap for search engines
 Sitemap: https://www.isaacskiwebdev.com/sitemap.xml
