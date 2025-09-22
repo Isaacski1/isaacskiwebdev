@@ -7255,6 +7255,16 @@ input.main-search-input::placeholder {
   margin-bottom: 10px;
 }
 
+.pricing-header .price-plan {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: -20px;
+}
+
+/* .pricing-header .price-no {
+  font-size: 26px !important;
+} */
+
 .pricing-box-items .pricing-header h2 sub {
   font-size: 18px;
   font-weight: 400;
@@ -7385,8 +7395,14 @@ input.main-search-input::placeholder {
   right: 8px;
 }
 
+.pricing-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 20px;
+}
+
 .pricing-card-items {
-  padding: 40px;
+  padding: 20px 10px;
   border-radius: 20px;
   border: 1px solid #ccc;
   margin-top: 30px;
@@ -7399,7 +7415,7 @@ input.main-search-input::placeholder {
 }
 
 .pricing-card-items .pricing-header h2 {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
   text-align: center;
 }
@@ -7411,7 +7427,7 @@ input.main-search-input::placeholder {
 
 .pricing-card-items .pricing-header h3 {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
 }
 
