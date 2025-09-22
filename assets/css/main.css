@@ -7420,6 +7420,12 @@ input.main-search-input::placeholder {
   text-align: center;
 }
 
+@media (max-width: 425px) {
+  .pricing-card-items .pricing-header h2 {
+    font-size: 22px;
+  }
+}
+
 .pricing-card-items .pricing-header h2 span {
   font-weight: 600;
   color: var(--theme);
