@@ -44,9 +44,15 @@
     })(window, document, 'script', 'dataLayer', 'GTM-MMST5CM2');</script>
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
   <!-- End Google Tag Manager -->
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("FP8dIh8qv3AnLePuz"); // Replace with your Public Key
+    })();
+  </script>
 
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -329,8 +335,7 @@
               <div class="section-title mb-0">
                 <h2>Get In Touch</h2>
               </div>
-              <form action="https://formcarry.com/s/bOxVSvfgV4x" method="POST" enctype="multipart/form-data"
-                id="contact-form1" class="contact-form-items">
+              <form id="contact-form1" class="contact-form-items">
                 <div class="row g-4">
                   <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="form-clt">
@@ -568,6 +573,8 @@
   <script src="assets/js/cookie.js"></script>
   <!-- AI Assistant For Isaacski Web Development Agency -->
   <script src="//code.tidio.co/pmrexuqaz60npgqqzgb4r0nwzxvt7wqe.js" async></script>
+  <!-- Email.js SDK -->
+  <script src="assets/js/email-template.js"></script>
 </body>
 
 </html>
