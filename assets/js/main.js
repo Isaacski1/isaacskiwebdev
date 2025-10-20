@@ -631,6 +631,25 @@
          });
       
     }); // End Document Ready Function
+
+    // Close Preloader Btn
+  document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.getElementById("preloader");
+    const closeBtn = document.getElementById("close-preloader");
+
+    // When user clicks the close button
+    closeBtn.addEventListener("click", function () {
+      preloader.style.transition = "opacity 0.6s ease, visibility 0.6s ease";
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+
+      // Optional: completely remove it after animation
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 600);
+    });
+  });
+
     
     //>> Prealoader Start <<//
     function loader() {

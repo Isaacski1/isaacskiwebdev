@@ -6942,6 +6942,23 @@ span {
   color: var(--theme3);
 }
 
+.close-preloader-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: rgb(255, 65, 65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #f9f9f9;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
 .preloader .loader {
   position: fixed;
   top: 0;

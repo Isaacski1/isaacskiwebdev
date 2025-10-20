@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             EMAILJS_CONFIG.TEMPLATE_ID,
             contactForm
         ).then(function() {
-            showMessage("✅ Your form has been submitted successfully! We will contact you soon.", "success");
-            contactForm.reset();
+            window.location.href = 'contact-submited-success.html';
         }).catch(function(error) {
             console.error("❌ Failed:", error);
             showMessage("❌ Failed to submit form. Please try again.", "error");
