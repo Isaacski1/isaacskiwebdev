@@ -2342,6 +2342,23 @@
       async
     ></script>
 
+    <!-- Offline Detection Modal -->
+    <div id="offline-modal" class="offline-modal">
+      <div class="offline-modal-content">
+        <div class="offline-icon">
+          <i class="fas fa-wifi-slash"></i>
+        </div>
+        <h3>You're Offline</h3>
+        <p>
+          It looks like you've lost your internet connection. Don't worry, you
+          can still browse some pages that were previously loaded.
+        </p>
+        <button id="retry-connection" class="retry-btn">
+          Retry Connection
+        </button>
+      </div>
+    </div>
+
     <!-- Advanced Features -->
     <!-- Lazy Loading Images -->
     <script>
@@ -2363,6 +2380,73 @@
           lazyImages.forEach((img) => imageObserver.observe(img));
         });
       }
+    </script>
+
+    <!-- Offline Detection Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const offlineModal = document.getElementById("offline-modal");
+        const retryBtn = document.getElementById("retry-connection");
+
+        function showOfflineModal() {
+          offlineModal.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        }
+
+        function hideOfflineModal() {
+          offlineModal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+
+        function checkOnlineStatus() {
+          if (!navigator.onLine) {
+            showOfflineModal();
+          } else {
+            hideOfflineModal();
+          }
+        }
+
+        // Check initial status
+        checkOnlineStatus();
+
+        // Listen for online/offline events
+        window.addEventListener("online", function () {
+          console.log("Back online!");
+          hideOfflineModal();
+        });
+
+        window.addEventListener("offline", function () {
+          console.log("Gone offline!");
+          showOfflineModal();
+        });
+
+        // Retry button functionality
+        retryBtn.addEventListener("click", function () {
+          if (navigator.onLine) {
+            hideOfflineModal();
+          } else {
+            // Force a connection check
+            fetch(window.location.href, { method: "HEAD", cache: "no-cache" })
+              .then(() => {
+                hideOfflineModal();
+              })
+              .catch(() => {
+                // Still offline, show a message
+                alert("Still offline. Please check your internet connection.");
+              });
+          }
+        });
+
+        // Close modal when clicking outside
+        offlineModal.addEventListener("click", function (e) {
+          if (e.target === offlineModal) {
+            // Only close if online
+            if (navigator.onLine) {
+              hideOfflineModal();
+            }
+          }
+        });
+      });
     </script>
 
     <!-- Service Worker for Offline Capability -->
