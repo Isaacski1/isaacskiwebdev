@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="author"
+      content="Isaac Krampah | Isaacski Web Development Agency"
+    />
+    <meta
+      name="description"
+      content="Get in touch with Isaacski Web Development Agency. We’re ready to discuss your website or IT project and help bring your vision online."
+    />
+    <meta
+      name="keywords"
+      content="CLient Onboarding Form, Web Design Consultation, Get Quote, Website Support, Ghana Web Agency"
+    />
+    <meta
+      property="og:title"
+      content="Client Onboarding Form - Isaacski Web Development Agency"
+    />
+    <meta
+      property="og:description"
+      content="Reach out for professional web design and IT solutions. Let’s work together."
+    />
+    <meta
+      property="og:url"
+      content="https://www.isaacskiwebdev.com/client_onboarding_form"
+    />
+    <meta property="og:image" content="assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contact - Isaacski Web Development Agency"
+    />
+    <meta
+      name="twitter:description"
+      content="Get in touch to start your website project today."
+    />
+    <meta name="twitter:image" content="assets/img/twitter-image.jpg" />
+    <link
+      rel="canonical"
+      href="https://www.isaacskiwebdev.com/client_onboarding_form"
+    />
+    <!-- Meta APP ID -->
+    <meta property="fb:app_id" content="1502771303972459" />
+    <title>
+      Client Onboarding Form | Isaacski Web Development Agency in Ghana
+    </title>
+    <!--<< Favicon >>-->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="https://www.isaacskiwebdev.com/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.isaacskiwebdev.com/assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.isaacskiwebdev.com/assets/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      type="apple-touch-icon"
+      href="https://www.isaacskiwebdev.com/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="android-chrome-512x512"
+      href="https://www.isaacskiwebdev.com/assets/android-chrome-512x512.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="android-chrome-192x192"
+      href="https://www.isaacskiwebdev.com/assets/android-chrome-192x192.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+      function nextStep(currentStepId, nextStepId) {
+        const currentStep = document.getElementById(currentStepId);
+        const nextStep = document.getElementById(nextStepId);
+
+        if (currentStep && nextStep) {
+          currentStep.classList.remove("active");
+          nextStep.classList.add("active");
+
+          // Update progress indicator
+          const progressItems = document.querySelectorAll(".progress-item");
+          progressItems.forEach((item) => {
+            if (item.dataset.step === nextStepId) {
+              item.classList.remove("opacity-50");
+              item.classList.add("text-white", "font-medium");
+            }
+          });
+        }
+      }
+
+      function prevStep(currentStepId, prevStepId) {
+        const currentStep = document.getElementById(currentStepId);
+        const prevStep = document.getElementById(prevStepId);
+
+        if (currentStep && prevStep) {
+          currentStep.classList.remove("active");
+          prevStep.classList.add("active");
+        }
+      }
+
+      // Initialize Feather Icons
+      document.addEventListener("DOMContentLoaded", function () {
+        feather.replace();
+      });
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8fafc;
+      }
+      .form-step {
+        display: none;
+      }
+      .form-step.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .input-highlight {
+        transition: all 0.3s ease;
+      }
+      .input-highlight:focus {
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+      }
+      .success-modal {
+        animation: modalSlideIn 0.3s ease-out;
+      }
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9) translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <div class="text-center mb-12">
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2"
+        >
+          Welcome to Isaacski Web Development Agency Client Onboarding!
+        </h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Let's gather all the details we need to create your perfect website.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Progress steps -->
+        <div
+          class="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-500 to-purple-600"
+        >
+          <div
+            class="progress-item flex-1 text-center text-white font-medium text-xs sm:text-sm md:text-base"
+            data-step="step1"
+          >
+            <span class="hidden sm:inline">1. Basic Info</span>
+            <span class="sm:hidden">1. Info</span>
+          </div>
+          <div
+            class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mx-1 sm:mx-2 rounded-full bg-white bg-opacity-20 flex-shrink-0"
+          >
+            <i
+              data-feather="arrow-right"
+              class="text-white w-3 h-3 sm:w-4 sm:h-4"
+            ></i>
+          </div>
+          <div
+            class="progress-item flex-1 text-center text-white font-medium opacity-50 text-xs sm:text-sm md:text-base"
+            data-step="step2"
+          >
+            <span class="hidden sm:inline">2. Design Preferences</span>
+            <span class="sm:hidden">2. Design</span>
+          </div>
+          <div
+            class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mx-1 sm:mx-2 rounded-full bg-white bg-opacity-20 opacity-50 flex-shrink-0"
+          >
+            <i
+              data-feather="arrow-right"
+              class="text-white w-3 h-3 sm:w-4 sm:h-4"
+            ></i>
+          </div>
+          <div
+            class="progress-item flex-1 text-center text-white font-medium opacity-50 text-xs sm:text-sm md:text-base"
+            data-step="step3"
+          >
+            <span class="hidden sm:inline">3. Final Review</span>
+            <span class="sm:hidden">3. Review</span>
+          </div>
+        </div>
+        <form id="onboardingForm" class="p-8">
+          <!-- Step 1: Basic Information -->
+          <div class="form-step active" id="step1">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+              Basic Information
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <label
+                  for="agencyName"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Agency Name</label
+                >
+                <input
+                  type="text"
+                  id="agencyName"
+                  name="agencyName"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="contactPerson"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Contact Person</label
+                >
+                <input
+                  type="text"
+                  id="contactPerson"
+                  name="contactPerson"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label
+                for="aboutAgency"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >About Your Agency</label
+              >
+              <textarea
+                id="aboutAgency"
+                name="aboutAgency"
+                rows="4"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                placeholder="Tell us about your real estate agency, your mission, and what makes you unique..."
+                required
+              ></textarea>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0"
+            >
+              <button
+                type="button"
+                class="px-4 sm:px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition"
+                disabled
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="px-4 sm:px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                onclick="validateStep1()"
+              >
+                Next: Design Preferences
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Design Preferences -->
+          <div class="form-step" id="step2">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+              Design Preferences
+            </h2>
+
+            <div class="mb-8">
+              <label class="block text-sm font-medium text-gray-700 mb-4"
+                >Website Style Preference</label
+              >
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="stylePreference"
+                    value="modern"
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="flex flex-col items-center p-4 rounded-lg border-2 border-gray-300 peer-checked:border-indigo-500 bg-white hover:border-indigo-300 transition cursor-pointer"
+                  >
+                    <div
+                      class="w-full h-32 mb-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded"
+                    ></div>
+                    <span class="text-gray-800 font-medium">Modern</span>
+                    <span class="text-xs text-gray-500 mt-1 text-center"
+                      >Clean lines, full-width images, bold typography</span
+                    >
+                  </div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="stylePreference"
+                    value="luxury"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="flex flex-col items-center p-4 rounded-lg border-2 border-gray-300 peer-checked:border-indigo-500 bg-white hover:border-indigo-300 transition cursor-pointer"
+                  >
+                    <div
+                      class="w-full h-32 mb-3 bg-gradient-to-r from-gray-800 to-black rounded"
+                    ></div>
+                    <span class="text-gray-800 font-medium">Luxury</span>
+                    <span class="text-xs text-gray-500 mt-1 text-center"
+                      >Elegant, premium materials, sophisticated</span
+                    >
+                  </div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="stylePreference"
+                    value="minimal"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="flex flex-col items-center p-4 rounded-lg border-2 border-gray-300 peer-checked:border-indigo-500 bg-white hover:border-indigo-300 transition cursor-pointer"
+                  >
+                    <div
+                      class="w-full h-32 mb-3 bg-gradient-to-r from-gray-100 to-gray-300 rounded"
+                    ></div>
+                    <span class="text-gray-800 font-medium">Minimal</span>
+                    <span class="text-xs text-gray-500 mt-1 text-center"
+                      >Simple, spacious, content-focused</span
+                    >
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label class="block text-sm font-medium text-gray-700 mb-4"
+                >Color Scheme</label
+              >
+              <div class="flex flex-wrap gap-3">
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="colorScheme"
+                    value="indigo"
+                    class="sr-only peer"
+                    checked
+                  />
+                  <div
+                    class="w-12 h-12 rounded-full bg-indigo-600 ring-2 ring-offset-2 ring-transparent peer-checked:ring-indigo-300 cursor-pointer hover:opacity-90 transition"
+                  ></div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="colorScheme"
+                    value="emerald"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="w-12 h-12 rounded-full bg-emerald-600 ring-2 ring-offset-2 ring-transparent peer-checked:ring-emerald-300 cursor-pointer hover:opacity-90 transition"
+                  ></div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="colorScheme"
+                    value="rose"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="w-12 h-12 rounded-full bg-rose-600 ring-2 ring-offset-2 ring-transparent peer-checked:ring-rose-300 cursor-pointer hover:opacity-90 transition"
+                  ></div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="colorScheme"
+                    value="amber"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="w-12 h-12 rounded-full bg-amber-600 ring-2 ring-offset-2 ring-transparent peer-checked:ring-amber-300 cursor-pointer hover:opacity-90 transition"
+                  ></div>
+                </label>
+                <label class="relative">
+                  <input
+                    type="radio"
+                    name="colorScheme"
+                    value="custom"
+                    class="sr-only peer"
+                  />
+                  <div
+                    class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 ring-2 ring-offset-2 ring-transparent peer-checked:ring-pink-300 cursor-pointer hover:opacity-90 transition"
+                  ></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Must-Have Features (Select all that apply)</label
+              >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="property-search"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Advanced Property Search</span>
+                </label>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="virtual-tours"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Virtual Tours Integration</span>
+                </label>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="agent-profiles"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Agent Profiles</span>
+                </label>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="mortgage-calculator"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Mortgage Calculator</span>
+                </label>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="neighborhood-info"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Neighborhood Information</span>
+                </label>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="features"
+                    value="blog"
+                    class="rounded text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Blog/News Section</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <button
+                type="button"
+                class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition"
+                onclick="prevStep('step2', 'step1')"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                onclick="validateStep2()"
+              >
+                Next: Final Review
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Final Review -->
+          <div class="form-step" id="step3">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+              Final Review
+            </h2>
+
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center"
+                >
+                  <i data-feather="check" class="text-indigo-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Almost There!
+                  </h3>
+                  <p class="text-gray-600">
+                    Review your information before submitting. You'll receive a
+                    confirmation email with next steps.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-b border-gray-200 divide-y divide-gray-200"
+              >
+                <div class="py-4">
+                  <h4 class="font-medium text-gray-800">Basic Information</h4>
+                  <div
+                    class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600"
+                  >
+                    <div>
+                      <span class="font-medium">Agency Name:</span>
+                      <span id="review-agencyName" class="text-gray-800"></span>
+                    </div>
+                    <div>
+                      <span class="font-medium">Contact Person:</span>
+                      <span
+                        id="review-contactPerson"
+                        class="text-gray-800"
+                      ></span>
+                    </div>
+                    <div>
+                      <span class="font-medium">Email:</span>
+                      <span id="review-email" class="text-gray-800"></span>
+                    </div>
+                    <div>
+                      <span class="font-medium">Phone:</span>
+                      <span id="review-phone" class="text-gray-800"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="py-4">
+                  <h4 class="font-medium text-gray-800">Design Preferences</h4>
+                  <div
+                    class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600"
+                  >
+                    <div>
+                      <span class="font-medium">Style:</span>
+                      <span id="review-style" class="text-gray-800"></span>
+                    </div>
+                    <div>
+                      <span class="font-medium">Color Scheme:</span>
+                      <span id="review-color" class="text-gray-800"></span>
+                    </div>
+                    <div>
+                      <span class="font-medium">Selected Features:</span>
+                      <span id="review-features" class="text-gray-800"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="additionalNotes"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Additional Notes</label
+              >
+              <textarea
+                id="additionalNotes"
+                name="additionalNotes"
+                rows="3"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 input-highlight focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                placeholder="Anything else we should know about your project?"
+              ></textarea>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="terms" class="font-medium text-gray-700"
+                  >I agree to the
+                  <a href="#" class="text-indigo-600 hover:text-indigo-800"
+                    >Terms of Service</a
+                  >
+                  and
+                  <a href="#" class="text-indigo-600 hover:text-indigo-800"
+                    >Privacy Policy</a
+                  ></label
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 mt-8"
+            >
+              <button
+                type="button"
+                class="px-4 sm:px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition"
+                onclick="prevStep('step3', 'step2')"
+              >
+                Previous
+              </button>
+              <button
+                type="submit"
+                id="submitBtn"
+                class="px-4 sm:px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition flex items-center justify-center space-x-2"
+              >
+                <span id="submitText">Submit Application</span>
+                <div
+                  id="loadingSpinner"
+                  class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
+                ></div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full hidden"
+      id="my-modal"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+      >
+        <div class="mt-3 text-center">
+          <div
+            class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+          >
+            <svg
+              class="h-6 w-6 text-green-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-6 font-medium text-gray-900 mt-4">
+            Application Submitted Successfully!
+          </h3>
+          <div class="mt-2 px-7 py-3">
+            <p class="text-sm text-gray-500">
+              Thank you for your interest! We have received your application and
+              will contact you within 24 hours to discuss next steps.
+            </p>
+          </div>
+          <div class="items-center px-4 py-3">
+            <button
+              id="closeModal"
+              class="px-4 py-2 bg-indigo-600 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            >
+              Got it!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function validateStep1() {
+        const requiredFields = [
+          "agencyName",
+          "contactPerson",
+          "email",
+          "phone",
+          "aboutAgency",
+        ];
+        let isValid = true;
+
+        requiredFields.forEach((fieldId) => {
+          const field = document.getElementById(fieldId);
+          if (!field.value.trim()) {
+            field.classList.add("border-red-500");
+            isValid = false;
+          } else {
+            field.classList.remove("border-red-500");
+          }
+        });
+
+        if (isValid) {
+          nextStep("step1", "step2");
+          updateReviewFields();
+        }
+      }
+
+      function validateStep2() {
+        nextStep("step2", "step3");
+        updateReviewFields();
+      }
+
+      function updateReviewFields() {
+        // Basic Info
+        document.getElementById("review-agencyName").textContent =
+          document.getElementById("agencyName").value;
+        document.getElementById("review-contactPerson").textContent =
+          document.getElementById("contactPerson").value;
+        document.getElementById("review-email").textContent =
+          document.getElementById("email").value;
+        document.getElementById("review-phone").textContent =
+          document.getElementById("phone").value;
+
+        // Design Preferences
+        const stylePreference = document.querySelector(
+          'input[name="stylePreference"]:checked'
+        ).value;
+        document.getElementById("review-style").textContent =
+          stylePreference.charAt(0).toUpperCase() + stylePreference.slice(1);
+
+        const colorScheme = document.querySelector(
+          'input[name="colorScheme"]:checked'
+        ).value;
+        document.getElementById("review-color").textContent =
+          colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1);
+
+        const selectedFeatures = Array.from(
+          document.querySelectorAll('input[name="features"]:checked')
+        )
+          .map((el) =>
+            el.value
+              .split("-")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ")
+          )
+          .join(", ");
+        document.getElementById("review-features").textContent =
+          selectedFeatures || "None selected";
+      }
+
+      // Close modal functionality
+      document
+        .getElementById("closeModal")
+        .addEventListener("click", function () {
+          document.getElementById("successModal").classList.add("hidden");
+        });
+
+      // Close modal on outside click
+      document
+        .getElementById("successModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            this.classList.add("hidden");
+          }
+        });
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      emailjs.init({
+        publicKey: "FP8dIh8qv3AnLePuz",
+      });
+
+      document
+        .getElementById("onboardingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const submitText = document.getElementById("submitText");
+          const loadingSpinner = document.getElementById("loadingSpinner");
+
+          // Show loading state
+          submitBtn.disabled = true;
+          submitBtn.classList.add("opacity-75", "cursor-not-allowed");
+          submitText.textContent = "Submitting...";
+          loadingSpinner.classList.remove("hidden");
+
+          const params = {
+            agencyName: document.getElementById("agencyName").value,
+            contactPerson: document.getElementById("contactPerson").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            aboutAgency: document.getElementById("aboutAgency").value,
+            stylePreference: document.querySelector(
+              'input[name="stylePreference"]:checked'
+            ).value,
+            colorScheme: document.querySelector(
+              'input[name="colorScheme"]:checked'
+            ).value,
+            features: Array.from(
+              document.querySelectorAll('input[name="features"]:checked')
+            )
+              .map((f) => f.value)
+              .join(", "),
+            additionalNotes: document.getElementById("additionalNotes").value,
+          };
+
+          const termsChecked = document.getElementById("terms").checked;
+          if (!termsChecked) {
+            alert(
+              "Please agree to the Terms of Service and Privacy Policy before submitting."
+            );
+            // Reset loading state
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("opacity-75", "cursor-not-allowed");
+            submitText.textContent = "Submit Application";
+            loadingSpinner.classList.add("hidden");
+            return;
+          }
+
+          emailjs.send("service_pl0bsvl", "template_18icu7j", params).then(
+            function () {
+              // Reset loading state
+              submitBtn.disabled = false;
+              submitBtn.classList.remove("opacity-75", "cursor-not-allowed");
+              submitText.textContent = "Submit Application";
+              loadingSpinner.classList.add("hidden");
+
+              // Show success modal
+              const modal = document.getElementById("successModal");
+              modal.classList.remove("hidden");
+
+              // Reset form
+              document.getElementById("onboardingForm").reset();
+              // Reset to step 1 after successful submission
+              document.getElementById("step1").classList.add("active");
+              document.getElementById("step3").classList.remove("active");
+              // Reset progress indicators
+              document.querySelectorAll(".progress-item").forEach((item) => {
+                item.classList.add("opacity-50");
+              });
+              document
+                .querySelector('[data-step="step1"]')
+                .classList.remove("opacity-50");
+
+              // Auto-hide modal after 5 seconds
+              setTimeout(() => {
+                modal.classList.add("hidden");
+              }, 5000);
+            },
+            function (error) {
+              // Reset loading state on error
+              submitBtn.disabled = false;
+              submitBtn.classList.remove("opacity-75", "cursor-not-allowed");
+              submitText.textContent = "Submit Application";
+              loadingSpinner.classList.add("hidden");
+              alert(
+                "Failed to send message. Please check your internet connection and try again."
+              );
+            }
+          );
+        });
+    </script>
+  </body>
+</html>
