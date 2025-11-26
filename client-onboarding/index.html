@@ -4,19 +4,63 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://vitejs.dev/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nova Agency Onboarding</title>
+    <title>Client Onboarding Form - Isaacski Web Dev</title>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#3b82f6",
+                600: "#2563eb",
+                900: "#1e3a8a",
+              },
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-out",
+              "slide-up": "slideUp 0.5s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Optional Custom Styles -->
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background: #f8fafc;
+        background: #f8fafc; /* Slate-50 */
       }
+
+      /* Custom scrollbar for aesthetics */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -32,8 +76,7 @@
       }
     </style>
 
-    <!-- Remove index.css since it does not exist -->
-
+    <!-- Import Map for React and dependencies -->
     <script type="importmap">
       {
         "imports": {
@@ -46,7 +89,7 @@
       }
     </script>
 
-    <!-- FIXED PATH -->
+    <!-- React Script -->
     <script type="module" crossorigin src="./assets/index-DCmFygjv.js"></script>
   </head>
 
