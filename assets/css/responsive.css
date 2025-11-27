@@ -45,9 +45,18 @@
   .section-title {
     margin-top: 40px;
   }
+  .hero-video-section .hero-content h1 {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 425px) {
+  .hero-video-section {
+    height: 70vh;
+  }
+  .hero-video-section .hero-content h1 {
+    font-size: 35px;
+  }
   .header-section.header-3 .header-main {
     padding: 0 10px;
     border-radius: 0;
@@ -282,6 +291,9 @@
 }
 
 @media (max-width: 375px) {
+  .hero-video-section .hero-content h1 {
+    font-size: 30px;
+  }
   .header-section.header-3 .header-main {
     padding: 0 10px;
     border-radius: 0;
