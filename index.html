@@ -160,16 +160,76 @@
     <link rel="stylesheet" href="assets/css/icomon.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/dark-mode.css" />
-    <link rel="stylesheet" href="css/cookie.css" />
 
     <!-- Security Headers -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://analytics.ahrefs.com https://www.googletagmanager.com https://code.tidio.co https://cdn.jsdelivr.net https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.ahrefs.com https://code.tidio.co;"
+      content="
+  default-src 'self' https://code.tidio.co http://code.tidio.co;
+
+  script-src
+    'self'
+    'unsafe-inline'
+    https://pagead2.googlesyndication.com
+    https://analytics.ahrefs.com
+    https://www.googletagmanager.com
+    https://code.tidio.co
+    http://code.tidio.co
+    https://cdn.jsdelivr.net
+    https://www.google.com
+    https://www.gstatic.com;
+
+  style-src
+    'self'
+    'unsafe-inline'
+    https://fonts.googleapis.com
+    https://code.tidio.co;
+
+  font-src
+    'self'
+    data:
+    https://fonts.gstatic.com
+    https://code.tidio.co
+    https://widget-v4.tidio.co;
+
+  img-src
+    'self'
+    data:
+    https:
+    http:
+    https://code.tidio.co
+    http://code.tidio.co;
+
+  connect-src
+    'self'
+    https://www.google-analytics.com
+    https://analytics.ahrefs.com
+    https://code.tidio.co
+    http://code.tidio.co
+    https://api.tidio.co
+    https://uploads.tidio.co
+    https://cdn.tidio.co
+    https://widget-v4.tidio.co
+    wss://code.tidio.co
+    wss://ws.tidio.co
+    wss://widget-v4.tidio.co;
+
+  media-src
+    'self'
+    https://code.tidio.co
+    http://code.tidio.co;
+
+  frame-src
+    'self'
+    https://code.tidio.co
+    http://code.tidio.co
+    https://widget-v4.tidio.co
+    https://pagead2.googlesyndication.com
+    https://googleads.g.doubleclick.net;
+"
     />
+
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
     <meta
       http-equiv="Referrer-Policy"
@@ -2348,8 +2408,6 @@
     <script src="assets/js/wow.min.js" defer></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js" defer></script>
-    <!-- Dark Mode Toggle -->
-    <script src="assets/js/dark-mode-toggle.js" defer></script>
     <!-- Cookies -->
     <script src="assets/js/cookie.js" defer></script>
     <!-- AI Assistant For Isaacski Web Development Agency -->

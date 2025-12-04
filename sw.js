@@ -50,7 +50,9 @@ self.addEventListener("fetch", function (event) {
         }
         var responseToCache = response.clone();
         caches.open(CACHE_NAME).then(function (cache) {
-          cache.put(event.request, responseToCache);
+          if (!event.request.url.startsWith("http")) {
+            return;
+          }
         });
         return response;
       });
