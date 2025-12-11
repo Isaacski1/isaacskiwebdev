@@ -4924,6 +4924,10 @@ span {
   display: inline-block;
 }
 
+.brand-slide-element .img-fluid {
+  height: 40px;
+}
+
 .item-bg {
   background-color: var(--bg) !important;
 }

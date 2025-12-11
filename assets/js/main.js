@@ -193,11 +193,12 @@
         freemode: true,
         centeredSlides: true,
         loop: true,
-        speed: 6000,
+        speed: 10000,
         allowTouchMove: false,
         autoplay: {
-          delay: 1,
-          disableOnInteraction: true,
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
         },
       });
     }
