@@ -11,7 +11,7 @@ const urlsToCache = [
   "/assets/css/main.css",
   "/assets/js/jquery-3.7.1.min.js",
   "/assets/js/main.js",
-  "/assets/img/logo/logo-1.png",
+  "/assets/img/logo/logo-1a.png",
 ];
 
 self.addEventListener("install", function (event) {
