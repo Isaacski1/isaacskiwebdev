@@ -244,14 +244,14 @@
         document.getElementById('refId').textContent = randomRef();
 
         // buttons
-        document.getElementById('homeBtn').addEventListener('click', () => { window.location.href = '/' })
-        document.getElementById('anotherBtn').addEventListener('click', () => { window.location.href = '/contact' })
+        document.getElementById('homeBtn').addEventListener('click', () => { window.location.href = 'index.html' })
+        document.getElementById('anotherBtn').addEventListener('click', () => { window.location.href = 'contact.html' })
 
             // drop confetti pieces
             (function dropConfetti() { const wrap = document.getElementById('checkWrap'); const colors = ['#F97316', '#F43F5E', '#60A5FA', '#34D399', '#A78BFA']; for (let i = 0; i < 8; i++) { const el = document.createElement('div'); el.className = 'confetti-piece'; el.style.width = '10px'; el.style.height = '14px'; el.style.left = (10 + i * 12) + 'px'; el.style.background = colors[i % colors.length]; el.style.borderRadius = (i % 2 ? '2px' : '3px'); el.style.animationDelay = (i * 80) + 'ms'; wrap.appendChild(el) } })();
 
         // optional auto redirect (uncomment to enable)
-        setTimeout(() => { window.location.href = '/'; }, 7000);
+        setTimeout(() => { window.location.href = 'index.html'; }, 7000);
     </script>
 </body>
 
