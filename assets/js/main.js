@@ -622,17 +622,17 @@
         let n,
           i = 0,
           o = !1;
-        (window.onmousemove = function (s) {
-          o ||
+        ((window.onmousemove = function (s) {
+          (o ||
             (t.style.transform =
               "translate(" + s.clientX + "px, " + s.clientY + "px)"),
             (e.style.transform =
               "translate(" + s.clientX + "px, " + s.clientY + "px)"),
             (n = s.clientY),
-            (i = s.clientX);
+            (i = s.clientX));
         }),
           $("body").on("mouseenter", "a, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
+            (e.classList.add("cursor-hover"), t.classList.add("cursor-hover"));
           }),
           $("body").on("mouseleave", "a, .cursor-pointer", function () {
             ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
@@ -640,7 +640,7 @@
               t.classList.remove("cursor-hover"));
           }),
           (e.style.visibility = "visible"),
-          (t.style.visibility = "visible");
+          (t.style.visibility = "visible"));
       }
     }
     $(function () {
@@ -661,28 +661,6 @@
       return false;
     });
     // Christmas Popup
-    if (!localStorage.getItem("christmasPopupShown")) {
-      setTimeout(function () {
-        $("body").append(`
-          <div id="christmas-popup" class="christmas-popup-overlay">
-            <div class="christmas-popup">
-              <button class="close-popup">&times;</button>
-              <img src="assets/img/icon/popup-img.jpg" alt="Christmas Discount" class="popup-image">
-              <h2>30% Off for Christmas!</h2>
-              <p>Enjoy 30% discount on all our services this Christmas season. Contact us now to get your discount code.</p>
-              <a href="contact.html" class="contact-btn">Contact for Discount</a>
-            </div>
-          </div>
-        `);
-        $("#christmas-popup").fadeIn();
-        $(".close-popup").on("click", function () {
-          $("#christmas-popup").fadeOut();
-        });
-        $(".contact-btn").on("click", function () {
-          localStorage.setItem("christmasPopupShown", "true");
-        });
-      }, 10000);
-    }
   }); // End Document Ready Function
 
   // Close Preloader Btn

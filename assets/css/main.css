@@ -4388,9 +4388,15 @@ span {
   -ms-transform: translateX(calc(100% + 80px));
   -o-transform: translateX(calc(100% + 80px));
   transform: translateX(calc(100% + 80px));
-  -webkit-transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
-  -moz-transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
-  transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+  -webkit-transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
+  -moz-transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
+  transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
   z-index: 99999;
   overflow-y: scroll;
   overscroll-behavior-y: contain;
@@ -6862,7 +6868,11 @@ span {
 }
 
 .preloader .animation-preloader .txt-loading {
-  font: bold 5em "Poppins", serif, "Manrope", serif;
+  font:
+    bold 5em "Poppins",
+    serif,
+    "Manrope",
+    serif;
   text-align: center;
   user-select: none;
 }
@@ -7110,12 +7120,21 @@ input.main-search-input::placeholder {
   height: 6px;
   z-index: 10000001;
   background-color: var(--theme);
-  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out,
+    margin 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  -o-transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out,
+    margin 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  transition:
+    width 0.3s ease-in-out,
+    height 0.3s ease-in-out,
+    margin 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 .cursor-inner.cursor-hover {
@@ -8002,8 +8021,8 @@ input.main-search-input::placeholder {
 .project-img-items-3 img {
   border-radius: 20px;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
+  height: 80%;
+  /* aspect-ratio: 1 / 1; */
 }
 
 .project-img-items-3 .icon {
@@ -11563,7 +11582,9 @@ input.main-search-input::placeholder {
   background-position-x: 75%;
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.3s,
+    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   margin: -200px 0 0 -50px;
   overflow: hidden;
   pointer-events: none;

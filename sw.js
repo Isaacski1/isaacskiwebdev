@@ -11,7 +11,7 @@ const urlsToCache = [
   "/assets/css/main.css",
   "/assets/js/jquery-3.7.1.min.js",
   "/assets/js/main.js",
-  "/assets/img/logo/logo-1a.png",
+  "/assets/img/logo/logo-1.png",
 ];
 
 self.addEventListener("install", function (event) {
@@ -19,7 +19,7 @@ self.addEventListener("install", function (event) {
     caches.open(CACHE_NAME).then(function (cache) {
       console.log("Service Worker: Cache opened");
       return cache.addAll(urlsToCache);
-    })
+    }),
   );
 });
 
@@ -32,9 +32,9 @@ self.addEventListener("activate", function (event) {
             console.log("Service Worker: Deleting old cache");
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
@@ -56,6 +56,6 @@ self.addEventListener("fetch", function (event) {
         });
         return response;
       });
-    })
+    }),
   );
 });

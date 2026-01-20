@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html
   lang="en"
   xmlns="http://www.w3.org/1999/xhtml"
@@ -102,21 +102,18 @@
       sizes="512x512"
       href="https://www.isaacskiwebdev.com/assets/android-chrome-512x512.png"
     />
-    <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GH3RV9FC4Y"
+    ></script>
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MMST5CM2");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GH3RV9FC4Y");
     </script>
 
     <!-- End Google Tag Manager -->
@@ -190,7 +187,7 @@
               <div class="offcanvas__logo">
                 <a href="index.html">
                   <img
-                    src="assets/img/logo/logo-2a.png"
+                    src="assets/img/logo/logo-2.png"
                     alt="logo-img"
                     style="width: 300px"
                   />
@@ -298,14 +295,14 @@
             <div class="logo">
               <a class="header-logo" href="index.html">
                 <img
-                  src="assets/img/logo/logo-1a.png"
+                  src="assets/img/logo/logo-1.png"
                   alt="logo-img"
                   style="max-width: 250px"
                 />
               </a>
               <a class="header-logo-2" href="index.html">
                 <img
-                  src="assets/img/logo/logo-2a.png"
+                  src="assets/img/logo/logo-2.png"
                   alt="logo-img"
                   style="max-width: 250px"
                 />
@@ -368,7 +365,7 @@
     <!-- Hero Section Start -->
     <div
       class="breadcrumb-wrapper bg-cover position-relative"
-      style="background-image: url('assets/img/news-2/bg.jpg')"
+      style="background-image: url(&quot;assets/img/news-2/bg.jpg&quot;)"
     >
       <div class="container">
         <div class="page-heading">
@@ -610,7 +607,7 @@
                         .querySelectorAll(".social-share a")
                         .forEach((anchor) => {
                           const currentUrl = encodeURIComponent(
-                            window.location.href
+                            window.location.href,
                           );
                           const href = anchor
                             .getAttribute("href")
@@ -633,7 +630,7 @@
                       JSON.parse(localStorage.getItem("replies")) || {};
                     Object.keys(storedReplies).forEach((commentId) => {
                       const commentContent = document.querySelector(
-                        `#${commentId} .content`
+                        `#${commentId} .content`,
                       );
                       if (commentContent) {
                         storedReplies[commentId].forEach((reply) => {
@@ -678,10 +675,10 @@
                           replyForm.remove();
                           document.removeEventListener(
                             "click",
-                            handleOutsideClick
+                            handleOutsideClick,
                           );
                         }
-                      }
+                      },
                     );
                   }
 
@@ -713,7 +710,7 @@
 
                     // Save the reply to localStorage
                     const commentId = commentContent.closest(
-                      ".blog-single-comment"
+                      ".blog-single-comment",
                     ).id;
                     const storedReplies =
                       JSON.parse(localStorage.getItem("replies")) || {};
@@ -726,7 +723,7 @@
                     });
                     localStorage.setItem(
                       "replies",
-                      JSON.stringify(storedReplies)
+                      JSON.stringify(storedReplies),
                     );
 
                     // Remove the reply form
@@ -831,7 +828,7 @@
                     // Log the number of comments appended
                     console.log(
                       "Comments appended to the DOM:",
-                      commentsArea.children.length
+                      commentsArea.children.length,
                     );
                   });
 
@@ -888,7 +885,7 @@
                       storedComments.push(comment);
                       localStorage.setItem(
                         "comments",
-                        JSON.stringify(storedComments)
+                        JSON.stringify(storedComments),
                       );
 
                       // Update the comments count
@@ -906,7 +903,7 @@
                       "d-flex",
                       "gap-4",
                       "pt-4",
-                      "pb-5"
+                      "pb-5",
                     );
                     commentElement.innerHTML = `
       <div class="image">
@@ -929,7 +926,7 @@
                   // Update the comments count
                   function updateCommentsCount(count) {
                     const commentsHeading = document.querySelector(
-                      ".comments-heading h3"
+                      ".comments-heading h3",
                     );
                     commentsHeading.textContent = `${count} Comment${
                       count !== 1 ? "s" : ""
@@ -1140,7 +1137,7 @@
             href="index.html"
           >
             <img
-              src="assets/img/logo/logo-2a.png"
+              src="assets/img/logo/logo-2.png"
               alt="img"
               style="width: 250px"
             />
