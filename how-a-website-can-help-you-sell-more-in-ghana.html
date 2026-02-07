@@ -79,14 +79,14 @@
     />
     <link
       rel="shortcut icon"
-      href="https://www.isaacskiwebdev.com/assets/favicon.ico"
+      href="https://www.isaacskiwebdev.com/favicon.ico"
       type="image/x-icon"
     />
 
     <!-- Apple Touch Icon -->
     <link
       rel="apple-touch-icon"
-      href="https://www.isaacskiwebdev.com/assets/apple-touch-icon.png"
+      href="https://www.isaacskiwebdev.com/assets/apple-icon-180x180.png"
     />
 
     <!-- Android/Chrome Icons -->
@@ -94,13 +94,13 @@
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="https://www.isaacskiwebdev.com/assets/android-chrome-192x192.png"
+      href="https://www.isaacskiwebdev.com/assets/android-icon-192x192.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="https://www.isaacskiwebdev.com/assets/android-chrome-512x512.png"
+      href="https://www.isaacskiwebdev.com/assets/android-icon-192x192.png"
     />
     <!-- Google tag (gtag.js) -->
     <script
@@ -129,7 +129,7 @@
     <link rel="stylesheet" href="assets/css/icomon.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
@@ -188,6 +188,8 @@
               <div class="offcanvas__logo">
                 <a href="index.html">
                   <img
+                    decoding="async"
+                    loading="lazy"
                     src="assets/img/logo/logo-2.png"
                     alt="logo-img"
                     style="width: 300px"
@@ -296,6 +298,8 @@
             <div class="logo">
               <a class="header-logo" href="index.html">
                 <img
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/logo/logo-1.png"
                   alt="logo-img"
                   style="max-width: 250px"
@@ -303,6 +307,8 @@
               </a>
               <a class="header-logo-2" href="index.html">
                 <img
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/logo/logo-2.png"
                   alt="logo-img"
                   style="max-width: 250px"
@@ -403,6 +409,10 @@
                 <div class="single-news-post">
                   <div class="post-featured-thumb">
                     <img
+                      height="853"
+                      width="1280"
+                      decoding="async"
+                      loading="lazy"
                       src="assets/img/news-2/pic-1.jpg"
                       alt="Isaacski Business Market"
                     />
@@ -498,6 +508,10 @@
                       <div class="col-lg-6">
                         <div class="details-image">
                           <img
+                            height="851"
+                            width="1280"
+                            decoding="async"
+                            loading="lazy"
                             src="assets/img/news-2/pic-2.jpg"
                             style="aspect-ratio: 1 / 0.8"
                             alt="img"
@@ -507,6 +521,10 @@
                       <div class="col-lg-6">
                         <div class="details-image">
                           <img
+                            height="926"
+                            width="1280"
+                            decoding="async"
+                            loading="lazy"
                             src="assets/img/news-2/pic-3.jpg"
                             style="aspect-ratio: 1 / 0.8"
                             alt="img"
@@ -908,7 +926,7 @@
                     );
                     commentElement.innerHTML = `
       <div class="image">
-        <img src="${comment.image}" alt="User Avatar">
+        <img decoding="async" loading="lazy" src="${comment.image}" alt="User Avatar">
       </div>
       <div class="content">
         <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
@@ -995,7 +1013,14 @@
                   <div class="recent-post-area">
                     <div class="recent-items">
                       <div class="recent-thumb">
-                        <img src="assets/img/news/2.jpg" alt="img" />
+                        <img
+                          height="853"
+                          width="1280"
+                          decoding="async"
+                          loading="lazy"
+                          src="assets/img/news/2.jpg"
+                          alt="img"
+                        />
                       </div>
                       <div class="recent-content">
                         <ul>
@@ -1015,7 +1040,14 @@
                     </div>
                     <div class="recent-items">
                       <div class="recent-thumb">
-                        <img src="assets/img/news/3.jpg" alt="img" />
+                        <img
+                          height="1423"
+                          width="2530"
+                          decoding="async"
+                          loading="lazy"
+                          src="assets/img/news/3.jpg"
+                          alt="img"
+                        />
                       </div>
                       <div class="recent-content">
                         <ul>
@@ -1036,7 +1068,14 @@
                     </div>
                     <div class="recent-items">
                       <div class="recent-thumb">
-                        <img src="assets/img/news/1.jpg" alt="img" />
+                        <img
+                          height="900"
+                          width="1200"
+                          decoding="async"
+                          loading="lazy"
+                          src="assets/img/news/1.jpg"
+                          alt="img"
+                        />
                       </div>
                       <div class="recent-content">
                         <ul>
@@ -1125,10 +1164,24 @@
     <!--  Footer Section Start -->
     <footer class="footer-section section-bg">
       <div class="color-shape">
-        <img src="assets/img/footer-color.png" alt="img" />
+        <img
+          height="765"
+          width="638"
+          decoding="async"
+          loading="lazy"
+          src="assets/img/footer-color.png"
+          alt="img"
+        />
       </div>
       <div class="color-shape-2">
-        <img src="assets/img/footer-color-2.png" alt="img" />
+        <img
+          height="701"
+          width="765"
+          decoding="async"
+          loading="lazy"
+          src="assets/img/footer-color-2.png"
+          alt="img"
+        />
       </div>
       <div class="container">
         <div class="footer-logo-area">
@@ -1138,6 +1191,10 @@
             href="index.html"
           >
             <img
+              height="506"
+              width="1557"
+              decoding="async"
+              loading="lazy"
               src="assets/img/logo/logo-2.png"
               alt="img"
               style="width: 250px"
@@ -1294,35 +1351,35 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!--<< All JS Plugins >>-->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script defer src="assets/js/jquery-3.7.1.min.js"></script>
     <!--<< Viewport Js >>-->
-    <script src="assets/js/viewport.jquery.js"></script>
+    <script defer src="assets/js/viewport.jquery.js"></script>
     <!--<< Bootstrap Js >>-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
     <!--<< Nice Select Js >>-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
     <!--<< Waypoints Js >>-->
-    <script src="assets/js/jquery.waypoints.js"></script>
+    <script defer src="assets/js/jquery.waypoints.js"></script>
     <!--<< Counterup Js >>-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script defer src="assets/js/jquery.counterup.min.js"></script>
     <!--<< Swiper Slider Js >>-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper-bundle.min.js"></script>
     <!--<< MeanMenu Js >>-->
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script defer src="assets/js/jquery.meanmenu.min.js"></script>
     <!--<< Magnific Popup Js >>-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script defer src="assets/js/jquery.magnific-popup.min.js"></script>
     <!--<< Wow Animation Js >>-->
-    <script src="assets/js/wow.min.js"></script>
+    <script defer src="assets/js/wow.min.js"></script>
     <!-- Dark Mode Toggle -->
-    <script src="assets/js/dark-mode-toggle.js"></script>
+    <script defer src="assets/js/main.js"></script>
     <!--<< Main.js >>-->
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js"></script>
     <!-- Advance.js -->
-    <script src="assets/js/advance.js"></script>
+    <script defer src="assets/js/advance.js"></script>
     <!-- Include CryptoJS for MD5 hashing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <!-- Cookies -->
-    <script src="assets/js/cookie.js"></script>
+    <script defer src="assets/js/cookie.js"></script>
     <!-- AI Assistant For Isaacski Web Development Agency -->
     <script
       src="//code.tidio.co/pmrexuqaz60npgqqzgb4r0nwzxvt7wqe.js"

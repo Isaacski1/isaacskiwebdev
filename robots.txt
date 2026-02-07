@@ -19,3 +19,6 @@ Allow: /
 
 # Sitemap for search engines
 Sitemap: https://www.isaacskiwebdev.com/sitemap.xml
+
+# Performance recommendation (apply at server/CDN layer):
+# Cache-Control: public, max-age=31536000, immutable for /assets/* (CSS/JS/images/fonts)

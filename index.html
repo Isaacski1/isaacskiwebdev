@@ -51,6 +51,8 @@
       property="og:description"
       content="Isaacski Web Development Agency provides professional web design, development, and IT solutions for businesses of all sizes. Your trusted partner for stunning websites."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.isaacskiwebdev.com/" />
     <meta
       property="og:image"
       content="https://www.isaacskiwebdev.com/assets/preview.jpg"
@@ -58,8 +60,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:url" content="https://www.isaacskiwebdev.com" />
-    <meta property="og:image" content="assets/img/og-image.jpg" />
+    <meta property="og:site_name" content="Isaacski Web Development Agency" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -69,7 +70,6 @@
       name="twitter:description"
       content="Professional web design, development, and digital marketing services by Isaacski Web Development Agency. Serving clients globally with creative web solutions."
     />
-    <meta name="twitter:image" content="assets/img/twitter-image.jpg" />
     <meta
       name="twitter:image"
       content="https://www.isaacskiwebdev.com/assets/preview.jpg"
@@ -160,6 +160,17 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="preconnect" href="https://analytics.ahrefs.com" />
+    <link rel="preconnect" href="https://code.tidio.co" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
+    <link rel="dns-prefetch" href="https://code.tidio.co" />
+
     <!--<< Bootstrap min.css >>-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!--<< All Min Css >>-->
@@ -187,7 +198,7 @@
         "@type": "Organization",
         "name": "Isaacski Web Development Agency",
         "url": "https://www.isaacskiwebdev.com",
-        "logo": "https://www.isaacskiwebdev.com/assets/android-chrome-512x512.png",
+        "logo": "https://www.isaacskiwebdev.com/assets/android-icon-192x192.png",
         "sameAs": [
           "https://www.instagram.com/isaacskiwebdev",
           "https://www.linkedin.com/in/isaacski",
@@ -288,6 +299,8 @@
               <div class="offcanvas__logo">
                 <a href="index.html">
                   <img
+                    decoding="async"
+                    loading="lazy"
                     src="assets/img/logo/logo-2.png"
                     alt="logo-img"
                     style="width: 300px"
@@ -398,6 +411,8 @@
             <div class="logo">
               <a class="header-logo" href="index.html">
                 <img
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/logo/logo-1.png"
                   alt="logo-img"
                   style="max-width: 250px"
@@ -405,6 +420,8 @@
               </a>
               <a class="header-logo-2" href="index.html">
                 <img
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/logo/logo-2.png"
                   alt="logo-img"
                   style="max-width: 250px"
@@ -468,6 +485,8 @@
     <section class="hero-video-section">
       <video
         src="assets/img/video/video-2.mp4"
+        poster="assets/img/video/video-2-poster.jpg"
+        preload="metadata"
         loop
         muted
         autoplay
@@ -539,7 +558,14 @@
           <div class="row g-4 align-items-center">
             <div class="col-lg-6">
               <div class="about-image wow fadeInUp" data-wow-delay=".3s">
-                <img src="assets/img/about/about-1.jpg" alt="img" />
+                <img
+                  height="417"
+                  width="626"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/img/about/about-1.jpg"
+                  alt="img"
+                />
 
                 <div class="about-experience">
                   <div class="about-experience-content">
@@ -576,7 +602,12 @@
                 <div class="about-inner">
                   <div class="icon-items wow fadeInUp" data-wow-delay=".3s">
                     <div class="icon">
-                      <img src="assets/img/about/icon-6.svg" alt="" />
+                      <img
+                        decoding="async"
+                        loading="lazy"
+                        src="assets/img/about/icon-6.svg"
+                        alt=""
+                      />
                     </div>
                     <div class="content">
                       <h6>Safety assurance</h6>
@@ -586,7 +617,14 @@
                     </div>
                   </div>
                   <div class="inner-thumb wow fadeInUp" data-wow-delay=".5s">
-                    <img src="assets/img/about/about-3.jpg" alt="img" />
+                    <img
+                      height="118"
+                      width="241"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/img/about/about-3.jpg"
+                      alt="img"
+                    />
                   </div>
                 </div>
                 <div class="about-author">
@@ -602,9 +640,23 @@
                   </div>
                   <div class="author-image wow fadeInUp" data-wow-delay=".5s">
                     <div class="img">
-                      <img src="assets/img/about/admin.jpg" alt="author-img" />
+                      <img
+                        height="475"
+                        width="475"
+                        decoding="async"
+                        loading="lazy"
+                        src="assets/img/about/admin.jpg"
+                        alt="author-img"
+                      />
                     </div>
-                    <img src="assets/img/about/signature.png" alt="signature" />
+                    <img
+                      height="55"
+                      width="93"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/img/about/signature.png"
+                      alt="signature"
+                    />
                   </div>
                 </div>
               </div>
@@ -1510,7 +1562,14 @@
             data-wow-delay=".3s"
           >
             <div class="project-img-items-3">
-              <img src="assets/img/project/1.JPG" alt="Roofing Company" />
+              <img
+                height="609"
+                width="790"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/project/1.JPG"
+                alt="Roofing Company"
+              />
               <a class="icon" href="ezy-roofs.html">
                 <i class="icon-arrow-right"></i>
               </a>
@@ -1521,7 +1580,14 @@
             data-wow-delay=".5s"
           >
             <div class="project-img-items-3">
-              <img src="assets/img/project/2.JPG" alt="Pharmacy" />
+              <img
+                height="670"
+                width="873"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/project/2.JPG"
+                alt="Pharmacy"
+              />
               <a class="icon" href="pharmatrust.html">
                 <i class="icon-arrow-right"></i>
               </a>
@@ -1532,7 +1598,14 @@
             data-wow-delay=".3s"
           >
             <div class="project-img-items-3">
-              <img src="assets/img/project/3.JPG" alt="Roofing Company" />
+              <img
+                height="651"
+                width="845"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/project/3.JPG"
+                alt="Roofing Company"
+              />
               <a class="icon" href="apex_skyline_limited.html">
                 <i class="icon-arrow-right"></i>
               </a>
@@ -1543,7 +1616,14 @@
             data-wow-delay=".5s"
           >
             <div class="project-img-items-3">
-              <img src="assets/img/project/4.JPG" alt="Ecommerce" />
+              <img
+                height="803"
+                width="1053"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/project/4.JPG"
+                alt="Ecommerce"
+              />
               <a class="icon" href="ecommerce-project.html">
                 <i class="icon-arrow-right"></i>
               </a>
@@ -1554,7 +1634,14 @@
             data-wow-delay=".7s"
           >
             <div class="project-img-items-3">
-              <img src="assets/img/project/5.JPG" alt="Ecommerce" />
+              <img
+                height="814"
+                width="1052"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/project/5.JPG"
+                alt="Ecommerce"
+              />
               <a class="icon" href="ike-shop.html">
                 <i class="icon-arrow-right"></i>
               </a>
@@ -1608,12 +1695,23 @@
             <div class="col-xl-4 col-lg-6">
               <div class="faq-image">
                 <img
+                  height="451"
+                  width="451"
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/admin-1.png"
                   alt="Isaacski"
                   class="wow img-custom-anim-left admin-img"
                 />
                 <div class="radius-shape">
-                  <img src="assets/img/faq/radius-shape.png" alt="img" />
+                  <img
+                    height="400"
+                    width="410"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/img/faq/radius-shape.png"
+                    alt="img"
+                  />
                 </div>
               </div>
             </div>
@@ -1813,6 +1911,10 @@
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide brand-slide-element">
               <img
+                height="211"
+                width="909"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/apexskyline.png"
                 alt="img"
                 class="img-fluid"
@@ -1820,6 +1922,10 @@
             </div>
             <div class="swiper-slide brand-slide-element">
               <img
+                height="396"
+                width="1335"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/ezyroofs.png"
                 alt="img"
                 class="img-fluid"
@@ -1827,6 +1933,10 @@
             </div>
             <div class="swiper-slide brand-slide-element">
               <img
+                height="900"
+                width="1600"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/dreamlight.jpg"
                 alt="img"
                 class="img-fluid"
@@ -1834,6 +1944,10 @@
             </div>
             <div class="swiper-slide brand-slide-element">
               <img
+                height="211"
+                width="909"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/apexskyline.png"
                 alt="img"
                 class="img-fluid"
@@ -1841,6 +1955,10 @@
             </div>
             <div class="swiper-slide brand-slide-element">
               <img
+                height="396"
+                width="1335"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/ezyroofs.png"
                 alt="img"
                 class="img-fluid"
@@ -1848,6 +1966,10 @@
             </div>
             <div class="swiper-slide brand-slide-element">
               <img
+                height="900"
+                width="1600"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/client/dreamlight.jpg"
                 alt="img"
                 class="img-fluid"
@@ -1879,6 +2001,10 @@
                       </p>
                       <div class="client-info">
                         <img
+                          height="853"
+                          width="1280"
+                          decoding="async"
+                          loading="lazy"
                           style="width: 80px; height: 80px; border-radius: 50%"
                           src="assets/img/testimonial/person-1.jpg"
                           alt="img"
@@ -1890,6 +2016,10 @@
                       </div>
                       <div class="quote-icon">
                         <img
+                          height="44"
+                          width="60"
+                          decoding="async"
+                          loading="lazy"
                           src="assets/img/testimonial/quote-01.png"
                           alt="icon"
                         />
@@ -1909,6 +2039,10 @@
                       </p>
                       <div class="client-info">
                         <img
+                          height="853"
+                          width="1280"
+                          decoding="async"
+                          loading="lazy"
                           style="width: 80px; height: 80px; border-radius: 50%"
                           src="assets/img/testimonial/person-2.jpg"
                           alt="img"
@@ -1920,6 +2054,10 @@
                       </div>
                       <div class="quote-icon">
                         <img
+                          height="44"
+                          width="60"
+                          decoding="async"
+                          loading="lazy"
                           src="assets/img/testimonial/quote-01.png"
                           alt="icon"
                         />
@@ -1989,7 +2127,14 @@
             </div>
             <div class="col-xl-8">
               <div class="testimonial-image wow img-custom-anim-right">
-                <img src="assets/img/testimonial/img-01.jpg" alt="img" />
+                <img
+                  height="667"
+                  width="788"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/img/testimonial/img-01.jpg"
+                  alt="img"
+                />
               </div>
             </div>
           </div>
@@ -2012,6 +2157,10 @@
             <div class="news-box-items-2 style-2">
               <div class="news-img">
                 <img
+                  height="900"
+                  width="1200"
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/news/1.jpg"
                   style="aspect-ratio: 1 / 0.7"
                   alt="img"
@@ -2053,6 +2202,10 @@
             <div class="news-box-items-2 style-2">
               <div class="news-img">
                 <img
+                  height="853"
+                  width="1280"
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/news/2.jpg"
                   style="aspect-ratio: 1 / 0.7"
                   alt="img"
@@ -2093,6 +2246,10 @@
             <div class="news-box-items-2 style-2">
               <div class="news-img">
                 <img
+                  height="1423"
+                  width="2530"
+                  decoding="async"
+                  loading="lazy"
                   src="assets/img/news/3.jpg"
                   style="aspect-ratio: 1 / 0.7"
                   alt="img"
@@ -2134,10 +2291,24 @@
     <!--  Footer Section Start -->
     <footer class="footer-section section-bg">
       <div class="color-shape">
-        <img src="assets/img/footer-color.png" alt="img" />
+        <img
+          height="765"
+          width="638"
+          decoding="async"
+          loading="lazy"
+          src="assets/img/footer-color.png"
+          alt="img"
+        />
       </div>
       <div class="color-shape-2">
-        <img src="assets/img/footer-color-2.png" alt="img" />
+        <img
+          height="701"
+          width="765"
+          decoding="async"
+          loading="lazy"
+          src="assets/img/footer-color-2.png"
+          alt="img"
+        />
       </div>
       <div class="container">
         <div class="footer-logo-area">
@@ -2147,6 +2318,10 @@
             href="index.html"
           >
             <img
+              height="506"
+              width="1557"
+              decoding="async"
+              loading="lazy"
               src="assets/img/logo/logo-2.png"
               alt="img"
               style="width: 250px"
@@ -2295,6 +2470,8 @@
       <div class="social-icon-box position-relative">
         <div class="social-icon-box-img">
           <img
+            decoding="async"
+            loading="lazy"
             width="48"
             height="48"
             src="https://img.icons8.com/color/48/chat--v1.png"
@@ -2308,6 +2485,10 @@
               title="Google Business"
               target="_blank"
               ><img
+                height="512"
+                width="512"
+                decoding="async"
+                loading="lazy"
                 src="assets/img/icon/google-business.png"
                 alt="Google Business Icon"
               />
@@ -2319,7 +2500,14 @@
               href="https://www.facebook.com/profile.php?id=61572319986741"
               title="Facebook"
               target="_blank"
-              ><img src="assets/img/icon/facebook.png" alt="Facebook Icon" />
+              ><img
+                height="601"
+                width="600"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/icon/facebook.png"
+                alt="Facebook Icon"
+              />
               <span class="media-name">FaceBook</span>
             </a>
           </div>
@@ -2328,7 +2516,14 @@
               href="https://www.instagram.com/isaacskiwebdev"
               title="Instagram"
               target="_blank"
-              ><img src="assets/img/icon/instagram.png" alt="Instagram Icon" />
+              ><img
+                height="512"
+                width="512"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/icon/instagram.png"
+                alt="Instagram Icon"
+              />
               <span class="media-name-2">Instagram</span>
             </a>
           </div>
@@ -2338,7 +2533,14 @@
               href="https://www.tiktok.com/@isaacski_web_designer"
               title="TikTok"
               target="_blank"
-              ><img src="assets/img/icon/tiktok.png" alt="TikTok Icon" />
+              ><img
+                height="838"
+                width="867"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/icon/tiktok.png"
+                alt="TikTok Icon"
+              />
               <span class="media-name-3">TikTok</span>
             </a>
           </div>
@@ -2347,7 +2549,14 @@
               href="https://wa.me/+233549175604"
               title="WhatsApp"
               target="_blank"
-              ><img src="assets/img/icon/whatsapp.png" alt="WhatsApp Icon" />
+              ><img
+                height="777"
+                width="809"
+                decoding="async"
+                loading="lazy"
+                src="assets/img/icon/whatsapp.png"
+                alt="WhatsApp Icon"
+              />
               <span class="media-name-5">WhatsApp</span>
             </a>
           </div>
@@ -2421,7 +2630,7 @@
     <!--<< Main.js >>-->
     <script src="assets/js/main.js" defer></script>
     <!-- Dark Mode Toggle -->
-    <script src="assets/js/dark-mode-toggle.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
     <!-- Cookies -->
     <script src="assets/js/cookie.js" defer></script>
     <!-- AI Assistant For Isaacski Web Development Agency -->

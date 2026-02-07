@@ -4137,6 +4137,70 @@ span {
   backdrop-filter: blur(45px);
 }
 
+.faq-header.header-section.header-3 {
+  top: 0;
+}
+
+.faq-header.header-section.header-3 .header-main {
+  padding: 8px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(5, 9, 29, 0.12);
+}
+
+.faq-header.header-section.header-3 .main-menu ul li a {
+  color: var(--header);
+  padding: 14px 0;
+}
+
+.faq-header.header-section.header-3
+  .header-right
+  .sidebar__toggle
+  .header-bar
+  span {
+  background: var(--header);
+}
+
+.faq-header.header-section.header-3 .header-logo,
+.faq-header.header-section.header-3 .header-logo-2 {
+  display: flex;
+  align-items: center;
+}
+
+.faq-header.header-section.header-3 .logo img {
+  max-height: 52px;
+  width: auto;
+}
+
+.faq-header.header-section.header-3 .header-logo-2 {
+  display: none;
+}
+
+.sticky.faq-header.header-section.header-3 .header-logo {
+  display: block;
+}
+
+.sticky.faq-header.header-section.header-3 .header-logo-2 {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .faq-header.header-section.header-3 .header-main {
+    padding: 6px 14px;
+  }
+
+  .faq-header.header-section.header-3 .logo img {
+    max-height: 44px;
+  }
+}
+
+@media (max-width: 575px) {
+  .faq-header.header-section.header-3 .header-main {
+    border-radius: 12px;
+  }
+}
+
 .header-section.style-2 .header-top {
   background-color: var(--theme2);
 }
